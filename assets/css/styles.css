@@ -1,0 +1,399 @@
+/* Base Reset / Typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  color: #111827;
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Layout Helpers */
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section--tight {
+  padding: 2.5rem 0;
+}
+
+.section--dark {
+  background: #3f3f46;
+  color: #f9fafb;
+}
+
+.section--light {
+  background: #f5f5f5;
+}
+
+.section--white {
+  background: #ffffff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* Header / Nav */
+
+.site-header {
+  background: #111827;
+  color: #f9fafb;
+  padding: 0.75rem 0;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.site-nav-toggle {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #111827;
+  cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero__eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero__title {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  max-width: 34rem;
+  margin: 0 auto 1.5rem;
+  font-size: 0.98rem;
+  color: #e5e7eb;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.btn-primary {
+  background: #facc15;
+  color: #111827;
+  border-color: #facc15;
+}
+
+.btn-primary:hover {
+  background: #eab308;
+  border-color: #eab308;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #f9fafb;
+}
+
+.btn-secondary:hover {
+  background: #030712;
+  transform: translateY(-1px);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+.btn-outline-light:hover {
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Grids / Cards */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-3--cards,
+.grid-4--cards {
+  margin-top: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+}
+
+.card--muted {
+  background: #f9fafb;
+  box-shadow: none;
+  border: 1px solid #e5e7eb;
+}
+
+.card--dark {
+  background: #111827;
+  color: #f9fafb;
+  border: 1px solid #4b5563;
+}
+
+/* Icon circle placeholder */
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #d4d4d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Lists */
+
+.list-check {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.list-check li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.list-check li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #16a34a;
+}
+
+/* Pill / Label */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: #fef9c3;
+  color: #854d0e;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Pricing */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pricing-card-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.pricing-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+/* Forms */
+
+.form-block {
+  max-width: 480px;
+  margin: 1.75rem auto 0;
+}
+
+.form-block input,
+.form-block textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d4d4d8;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Footer */
+
+.site-footer {
+  background: #111827;
+  color: #9ca3af;
+  padding: 2.5rem 0 1.5rem;
+  font-size: 0.78rem;
+}
+
+.site-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-footer h4 {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.2rem;
+}
+
+/* Hero-specific background band */
+
+.hero-band {
+  background: #3f3f46;
+  color: #f9fafb;
+}
+
+/* Utility text sizes */
+
+.h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  font-size: 0.98rem;
+  color: #4b5563;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .grid-2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pricing-grid,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .site-header__inner {
+    padding-top: 0.1rem;
+  }
+}
