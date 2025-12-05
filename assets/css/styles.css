@@ -1,17 +1,20 @@
-/* ==========================
-   Design Tokens / Base
-   ========================== */
-
+/* ===========================
+   Brand Tokens
+   =========================== */
 :root {
-  --brand-dark: #606063;     /* logo background */
-  --brand-darker: #4a4a4d;
-  --brand-light: #ffffff;
-  --bg-soft: #f5f5f5;
-  --text-main: #1a1a1a;
-  --text-muted: #4b4b4f;
-  --border-subtle: #e3e3e7;
+  --brand-dark: #606063;      /* main gray from logo */
+  --brand-dark-soft: #4f4f52; /* hover / darker */
+  --brand-light: #ffffff;     /* text + borders on dark */
+  --bg-light: #f4f4f5;        /* page background */
+  --card-bg: #ffffff;
+  --text-main: #111827;
+  --text-muted: #4b5563;
+  --border-subtle: #e5e7eb;
 }
 
+/* ===========================
+   Reset / Base
+   =========================== */
 *,
 *::before,
 *::after {
@@ -25,7 +28,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
   color: var(--text-main);
-  background-color: var(--bg-soft);
+  background-color: var(--bg-light);
 }
 
 img {
@@ -42,10 +45,9 @@ button {
   font-family: inherit;
 }
 
-/* ==========================
+/* ===========================
    Layout Helpers
-   ========================== */
-
+   =========================== */
 .container {
   max-width: 1120px;
   margin: 0 auto;
@@ -60,27 +62,26 @@ button {
   padding: 2.5rem 0;
 }
 
-.section--dark {
-  background: var(--brand-dark);
-  color: var(--brand-light);
+.section--white {
+  background: #ffffff;
 }
 
 .section--light {
-  background: var(--bg-soft);
+  background: var(--bg-light);
 }
 
-.section--white {
-  background: #ffffff;
+.section--dark {
+  background: var(--brand-dark);
+  color: var(--brand-light);
 }
 
 .text-center {
   text-align: center;
 }
 
-/* ==========================
+/* ===========================
    Header / Nav
-   ========================== */
-
+   =========================== */
 .site-header {
   background: var(--brand-dark);
   color: var(--brand-light);
@@ -96,51 +97,49 @@ button {
 .site-logo {
   font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 
 .site-nav-toggle {
   font-size: 0.75rem;
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--brand-light);
   background: transparent;
   color: var(--brand-light);
   cursor: pointer;
 }
 
-/* ==========================
+/* ===========================
    Hero
-   ========================== */
+   =========================== */
+.hero {
+  padding: 5rem 0 4rem;
+}
 
 .hero-band {
   background: var(--brand-dark);
   color: var(--brand-light);
 }
 
-.hero {
-  padding: 5rem 0 4rem;
-}
-
 .hero__eyebrow {
   font-size: 0.85rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  opacity: 0.9;
+  margin-bottom: 0.75rem;
 }
 
 .hero__title {
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: clamp(2rem, 3.1vw, 2.6rem);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .hero__subtitle {
   max-width: 36rem;
-  margin: 0 auto 1.75rem;
+  margin: 0 auto;
   font-size: 0.98rem;
-  opacity: 0.95;
+  color: #e5e5e5;
 }
 
 .hero__actions {
@@ -148,26 +147,30 @@ button {
   flex-wrap: wrap;
   gap: 0.75rem;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.75rem;
 }
 
-/* Sticky note style (but not yellow) */
-
-.hero-note {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
-  border-radius: 0.25rem;
-  background: #f0f0f3;
-  color: #444;
-  font-size: 0.8rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+/* ===========================
+   Headings / Text
+   =========================== */
+.h2 {
+  font-size: 1.6rem;
+  margin: 0;
 }
 
-/* ==========================
+.h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.35rem;
+}
+
+.lead {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+/* ===========================
    Buttons
-   ========================== */
-
+   =========================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -182,6 +185,7 @@ button {
     transform 0.08s ease;
 }
 
+/* primary = light on dark */
 .btn-primary {
   background: var(--brand-light);
   color: var(--brand-dark);
@@ -190,9 +194,11 @@ button {
 
 .btn-primary:hover {
   background: #eaeaea;
+  border-color: #eaeaea;
   transform: translateY(-1px);
 }
 
+/* secondary = dark on light */
 .btn-secondary {
   background: var(--brand-dark);
   color: var(--brand-light);
@@ -200,10 +206,12 @@ button {
 }
 
 .btn-secondary:hover {
-  background: var(--brand-darker);
+  background: var(--brand-dark-soft);
+  border-color: var(--brand-dark-soft);
   transform: translateY(-1px);
 }
 
+/* outline on dark */
 .btn-outline-light {
   background: transparent;
   color: var(--brand-light);
@@ -215,10 +223,9 @@ button {
   color: var(--brand-dark);
 }
 
-/* ==========================
+/* ===========================
    Grids / Cards
-   ========================== */
-
+   =========================== */
 .grid-2 {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -237,31 +244,24 @@ button {
 }
 
 .card {
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
 }
 
 .card--muted {
-  background: #f9f9fb;
-  border: 1px solid var(--border-subtle);
+  background: #f9fafb;
   box-shadow: none;
+  border: 1px solid var(--border-subtle);
 }
 
-.card--dark {
-  background: var(--brand-darker);
-  color: var(--brand-light);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Icon circle */
-
+/* Icon circle placeholders used in Sid's wireframes */
 .icon-circle {
   width: 40px;
   height: 40px;
   border-radius: 999px;
-  border: 1px solid #c8c8ce;
+  border: 1px solid #d4d4d8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,22 +269,20 @@ button {
   margin-bottom: 0.85rem;
 }
 
-/* ==========================
+/* ===========================
    Lists
-   ========================== */
-
+   =========================== */
 .list-check {
   list-style: none;
-  padding: 0;
   margin: 0.75rem 0 0;
+  padding: 0;
 }
 
 .list-check li {
   position: relative;
-  padding-left: 1.2rem;
+  padding-left: 1.1rem;
   font-size: 0.95rem;
-  margin-bottom: 0.4rem;
-  color: var(--text-muted);
+  margin-bottom: 0.35rem;
 }
 
 .list-check li::before {
@@ -295,88 +293,14 @@ button {
   color: var(--brand-dark);
 }
 
-/* ==========================
-   Typography helpers
-   ========================== */
-
-.h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.45rem;
-}
-
-.lead {
-  font-size: 0.98rem;
-  color: var(--text-muted);
-}
-
-/* Pill label for "December" etc. */
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.7rem;
-  border-radius: 999px;
-  background: #e4e4e9;
-  color: #3b3b40;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-/* Pricing */
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.pricing-card-title {
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-.pricing-price {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-/* ==========================
-   Forms
-   ========================== */
-
-.form-block {
-  max-width: 480px;
-  margin: 1.75rem auto 0;
-}
-
-.form-block input,
-.form-block textarea {
-  width: 100%;
-  padding: 0.7rem 0.85rem;
-  border-radius: 0.375rem;
-  border: 1px solid #d4d4d8;
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-}
-
-/* ==========================
+/* ===========================
    Footer
-   ========================== */
-
+   =========================== */
 .site-footer {
   background: var(--brand-dark);
   color: #d4d4d8;
   padding: 2.5rem 0 1.5rem;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
 }
 
 .site-footer__top {
@@ -390,30 +314,28 @@ button {
 .site-footer h4 {
   font-size: 0.85rem;
   color: var(--brand-light);
-  margin-bottom: 0.5rem;
+  margin: 0 0 0.5rem;
 }
 
 .footer-links {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .footer-links li {
   margin-bottom: 0.25rem;
 }
 
-/* ==========================
+/* ===========================
    Responsive
-   ========================== */
-
+   =========================== */
 @media (max-width: 960px) {
   .grid-2 {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .grid-3,
-  .pricing-grid {
+  .grid-3 {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -425,5 +347,9 @@ button {
 @media (max-width: 640px) {
   .section {
     padding: 3rem 0;
+  }
+
+  .site-header__inner {
+    align-items: center;
   }
 }
