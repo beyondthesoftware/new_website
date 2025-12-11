@@ -48,12 +48,33 @@ button {
    Navigation
    =========================== */
 
+/* Wrapper for menu button and dropdown */
+.site-nav-wrapper {
+  position: relative;
+}
+
+/* Menu button always visible */
+.site-nav-toggle {
+  border: 1px solid var(--brand-light);
+  background: transparent;
+  color: var(--brand-light);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.site-nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 /* Hidden until button click */
 .site-nav {
   display: none;
   position: absolute;
   right: 0;
-  top: 3.5rem;
+  top: calc(100% + 0.5rem);
   background: var(--brand-dark);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
@@ -79,21 +100,11 @@ button {
   color: var(--brand-light);
   text-decoration: none;
   opacity: 0.9;
+  white-space: nowrap;
 }
 
 .site-nav__list a:hover {
   opacity: 1;
-}
-
-/* Menu button always visible */
-.site-nav-toggle {
-  border: 1px solid var(--brand-light);
-  background: transparent;
-  color: var(--brand-light);
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  cursor: pointer;
 }
 /* ===========================
    Layout Helpers
@@ -142,7 +153,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 .site-logo {
