@@ -73,7 +73,7 @@ button {
 .site-nav {
   display: none;
   position: absolute;
-  right: 0;
+  right: 1.5rem;
   top: calc(100% + 0.75rem);
   background: var(--brand-dark);
   border-radius: 0.5rem;
