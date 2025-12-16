@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | Beyond the Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <div class="site-logo">Beyond the Software</div>
+
+    <!-- Menu wrapper for proper dropdown positioning -->
+    <div class="site-nav-wrapper">
+      <!-- Menu button (always visible) -->
+      <button
+        class="site-nav-toggle"
+        type="button"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <!-- Hidden until menu clicked -->
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="momentum-lab.html">Momentum Lab</a></li>
+          <li><a href="https://capsaintelligence.com" target="_blank" rel="noopener">Capsa Intelligence</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <!-- About Hero -->
+  <section class="section hero hero-band">
+    <div class="container text-center">
+      <h1 class="hero__title">Meet the Team</h1>
+      <p class="hero__subtitle">
+        Beyond the Software helps landscape companies strengthen their teams and processes
+        so Aspire becomes the reliable system their business deserves.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="grid-2" style="margin-top: 2rem; align-items: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="text-center">
+          <img
+            src="assets/img/darrin-headshot.jpg"
+            alt="Darrin Braun"
+            style="border-radius: 1rem; max-width: 300px; margin: 0 auto;"
+          />
+        </div>
+
+        <div>
+          <h2 class="h2">Darrin Braun</h2>
+          <p style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1rem; color: var(--brand-dark); font-weight: 600;">
+            Founder &amp; Lead Consultant
+          </p>
+          <p class="lead">
+            Beyond the Software is led by Darrin Braun, a former Aspire employee and
+            operations leader with more than five years of consulting experience in the landscape industry.
+          </p>
+          <p class="lead">
+            Darrin's work blends the strategic view owners need with the practical detail
+            branch leaders and admins live in every day — so Aspire becomes the bridge
+            between where you're headed and how the work actually gets done.
+          </p>
+          <p class="lead">
+            The focus stays on building internal capability, improving processes, and helping
+            teams use Aspire with confidence.
+          </p>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-secondary"
+            style="margin-top: 1.5rem;"
+          >
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--light">
+    <div class="container text-center">
+      <h2 class="h2">Ready to Get Started?</h2>
+      <p class="lead" style="max-width: 40rem; margin: 0.75rem auto 1.75rem;">
+        Let's talk about how we can help your team use Aspire with confidence.
+      </p>
+      <div class="hero__actions">
+        <a href="contact.html" class="btn btn-primary">Schedule a Call</a>
+        <a href="newsletter.html" class="btn btn-secondary">Stay in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <h4>Beyond the Software</h4>
+          <p>
+            We help landscaping companies turn Aspire into the engine
+            that runs the business.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="audit.html">Aspire Audit</a></li>
+            <li><a href="momentum-lab.html">Momentum Lab</a></li>
+            <li><a href="https://capsaintelligence.com" target="_blank" rel="noopener">Capsa Intelligence</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact &amp; Support</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:support@beyondthesoftware.com">support@beyondthesoftware.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>&copy; <span id="year"></span> Beyond the Software. All rights reserved.</div>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
