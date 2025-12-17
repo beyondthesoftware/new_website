@@ -5,31 +5,51 @@
   <title>Momentum Lab | Beyond the Software</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header hero-band">
-    <div class="container site-header__inner">
-      <div class="site-logo">Beyond the Software</div>
-      <button class="site-nav-toggle" type="button">Menu</button>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="site-logo" style="text-decoration: none; color: inherit; cursor: pointer;">Beyond the Software</a>
+
+    <!-- Menu wrapper for proper dropdown positioning -->
+    <div class="site-nav-wrapper">
+      <!-- Menu button (always visible) -->
+      <button
+        class="site-nav-toggle"
+        type="button"
+        aria-expanded="false"
+      >
+        Menu
+      </button>
+
+      <!-- Hidden until menu clicked -->
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="momentum-lab.html">Momentum Lab</a></li>
+          <li><a href="https://capsaintelligence.com" target="_blank" rel="noopener">Capsa Intelligence</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- Hero -->
   <section class="section hero hero-band">
     <div class="container text-center">
-      <p class="hero__eyebrow">Momentum Lab</p>
       <h1 class="hero__title">
-        Build Real Progress in Aspire<br />
-        One Sprint at a Time
+        Build Real Progress in Aspire One Sprint at a Time
       </h1>
-      <p class="hero__subtitle">
-        A focused, four-week, done-with-you program that helps Aspire users
-        finally move from “we should do this…” to “this works and it sticks.”
-      </p>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p class="hero__subtitle">
+          A focused, four-week, done-with-you program that helps Aspire users finally move from "I should do that..." to "It's done and it works."
+        </p>
+      </div>
       <div class="hero__actions">
         <a href="#upcoming-sprints" class="btn btn-primary">See Upcoming Sprints</a>
-        <a href="#how-it-works" class="btn btn-outline-light">How Momentum Lab Works</a>
       </div>
     </div>
   </section>
@@ -51,9 +71,9 @@
   <section class="section section--light">
     <div class="container">
       <div class="grid-2">
-        <!-- Left column: image + bullets -->
+        <!-- Left column: image -->
         <div>
-          <img src="assets/img/momentum-lab-hero.jpg" alt="Team reviewing Aspire dashboards" />
+          <img src="assets/img/momentum-lab-hero.jpg" alt="Team reviewing Aspire dashboards" style="border-radius: 0.75rem;" />
         </div>
 
         <!-- Right column: copy & bullets -->
@@ -69,8 +89,8 @@
           <h3 class="h3" style="margin-top: 1.5rem;">Who Momentum Lab Is Built For</h3>
           <ul class="list-check">
             <li>Landscape companies actively running Aspire for core operations.</li>
-            <li>Leaders who know “we need to clean this up” but are stuck on where to start.</li>
-            <li>Teams who want structure, accountability, and practical tools.</li>
+            <li>Leaders who know "we need to clean this up" but are stuck on where to start.</li>
+            <li>Teams who want structure, accountability, and practical tools — not vague consulting promises.</li>
           </ul>
         </div>
       </div>
@@ -81,7 +101,7 @@
   <section id="how-it-works" class="section section--white">
     <div class="container">
       <h2 class="h2 text-center">How Momentum Lab Works</h2>
-      <p class="lead text-center" style="max-width: 40rem; margin: 0.5rem auto 2.25rem;">
+      <p class="lead text-center" style="max-width: 44rem; margin: 0.5rem auto 2.25rem;">
         Each sprint focuses on one core problem inside your Aspire system and walks you
         through four weeks of targeted action, support, and review.
       </p>
@@ -100,7 +120,7 @@
           <div class="icon-circle">2</div>
           <h3 class="h3">Support You Can Count On</h3>
           <p>
-            Live calls and Slack/email support (configure as needed) to keep your team
+            Live calls and Slack/email support to keep your team
             moving, answer questions, and remove roadblocks.
           </p>
         </article>
@@ -121,7 +141,7 @@
   <section id="upcoming-sprints" class="section section--dark">
     <div class="container">
       <h2 class="h2 text-center">Upcoming Sprints</h2>
-      <p class="hero__subtitle">
+      <p class="hero__subtitle text-center">
         Each sprint is focused, practical, and designed around real operational challenges
         Aspire teams face every season.
       </p>
@@ -129,7 +149,7 @@
       <div class="grid-3 grid-3--cards" style="margin-top: 2.5rem;">
         <!-- Sprint 1 -->
         <article class="card card--dark">
-          <span class="pill">December</span>
+          <span class="pill">December 2025</span>
           <h3 class="h3" style="margin-top: 0.75rem;">Operation Clean Slate</h3>
           <p>
             Get the admin chaos under control. Clean up core settings, naming conventions,
@@ -138,34 +158,34 @@
           <ul class="list-check">
             <li>System clean-up checklist</li>
             <li>Admin working session</li>
-            <li>Quick wins you can see in a week</li>
+            <li>Quick wins you can see in week one</li>
           </ul>
-          <a href="sprint-template.html" class="btn btn-primary" style="margin-top: 1.25rem;">
-            View Sprint Details
+          <a href="#interest-form" class="btn btn-primary" style="margin-top: 1.25rem;">
+            Join This Sprint
           </a>
         </article>
 
         <!-- Sprint 2 -->
         <article class="card card--dark">
-          <span class="pill">January</span>
+          <span class="pill">January 2026</span>
           <h3 class="h3" style="margin-top: 0.75rem;">Lines in the Sand</h3>
           <p>
             Clarify roles, responsibilities, and approval paths inside Aspire so
-            everyone knows what “done right” looks like.
+            everyone knows what "done right" looks like.
           </p>
           <ul class="list-check">
             <li>Role & responsibility map</li>
             <li>Approval workflows</li>
             <li>Scorecard starter pack</li>
           </ul>
-          <a href="sprint-template.html" class="btn btn-primary" style="margin-top: 1.25rem;">
-            View Sprint Details
+          <a href="#interest-form" class="btn btn-primary" style="margin-top: 1.25rem;">
+            Join This Sprint
           </a>
         </article>
 
         <!-- Sprint 3 -->
         <article class="card card--dark">
-          <span class="pill">February</span>
+          <span class="pill">February 2026</span>
           <h3 class="h3" style="margin-top: 0.75rem;">Coming Soon</h3>
           <p>
             Another focused, four-week sprint built around a real issue your peers are
@@ -183,9 +203,9 @@
   <section class="section section--white">
     <div class="container">
       <h2 class="h2 text-center">Investment</h2>
-      <p class="lead text-center" style="max-width: 40rem; margin: 0.5rem auto 2rem;">
+      <p class="lead text-center" style="max-width: 44rem; margin: 0.5rem auto 2rem;">
         Momentum Lab sprints are small, applied implementation programs. Pricing varies
-        by sprint based on complexity and level of support. Example tiers are below.
+        by sprint based on complexity and level of support. Example tiers below.
       </p>
 
       <div class="pricing-grid">
@@ -214,9 +234,9 @@
   <section id="interest-form" class="section section--light">
     <div class="container text-center">
       <h2 class="h2">Ready to Join a Sprint?</h2>
-      <p class="lead" style="max-width: 40rem; margin: 0.5rem auto 1.5rem;">
-        Tell us your interest level and which sprint you’d like early access to.
-        We’ll send dates, details, and next steps. No payment required to raise your hand.
+      <p class="lead" style="max-width: 44rem; margin: 0.5rem auto 1.5rem;">
+        Tell us which sprint you're interested in and we'll send dates, details, and next steps.
+        No payment required to raise your hand.
       </p>
 
       <div class="form-block">
@@ -234,21 +254,21 @@
   <section class="section section--white">
     <div class="container">
       <h2 class="h2 text-center">About Momentum Lab</h2>
-      <p class="lead text-center" style="max-width: 44rem; margin: 0.5rem auto 2.5rem;">
+      <p class="lead text-center" style="max-width: 48rem; margin: 0.5rem auto 2.5rem;">
         Momentum Lab is co-led by Beyond the Software and partners who live inside
         the landscape industry every day. Together we bring the mix of operations,
         systems, and coaching required to help Aspire teams build durable change.
       </p>
 
-      <div class="grid-2">
+      <div class="grid-2" style="gap: 2rem;">
         <article class="card card--muted text-center">
-          <img src="assets/img/darrin-headshot.jpg" alt="Darrin Braun" style="border-radius: 0.75rem; margin-bottom: 0.75rem;">
+          <img src="assets/img/darrin-headshot.jpg" alt="Darrin Braun" style="border-radius: 0.75rem; margin-bottom: 0.75rem; max-width: 100%;">
           <h3 class="h3">Darrin Braun</h3>
           <p>Founder, Beyond the Software</p>
         </article>
 
         <article class="card card--muted text-center">
-          <img src="assets/img/paula-headshot.jpg" alt="Paula" style="border-radius: 0.75rem; margin-bottom: 0.75rem;">
+          <img src="assets/img/paula-headshot.jpg" alt="Paula Smith" style="border-radius: 0.75rem; margin-bottom: 0.75rem; max-width: 100%;">
           <h3 class="h3">Paula Smith</h3>
           <p>Marketing & Momentum Lab Co-Creator</p>
         </article>
@@ -260,13 +280,13 @@
   <section class="section section--light">
     <div class="container text-center">
       <h2 class="h2">Build the Version of Aspire You Always Meant to Have</h2>
-      <p class="lead" style="max-width: 40rem; margin: 0.5rem auto 1.75rem;">
+      <p class="lead" style="max-width: 44rem; margin: 0.5rem auto 1.75rem;">
         Join a Momentum Lab sprint for focused, done-with-you progress — or pair it with
         customized support through Beyond the Software consulting.
       </p>
       <div class="hero__actions">
         <a href="#upcoming-sprints" class="btn btn-primary">See Sprint Options</a>
-        <a href="/contact.html" class="btn btn-secondary">Explore Consulting</a>
+        <a href="contact.html" class="btn btn-secondary">Explore Consulting</a>
       </div>
     </div>
   </section>
@@ -282,10 +302,11 @@
         <div>
           <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/audit.html">Aspire Audit</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="audit.html">Aspire Audit</a></li>
             <li><a href="momentum-lab.html">Momentum Lab</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="https://capsaintelligence.com" target="_blank" rel="noopener">Capsa Intelligence</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
