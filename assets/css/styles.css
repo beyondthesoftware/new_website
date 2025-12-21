@@ -432,6 +432,27 @@ button {
   margin-top: 1.5rem;
 }
 
+/* Side-positioned carousel controls */
+.carousel-wrapper--side-controls {
+  padding: 0 3.5rem;
+}
+
+.carousel-wrapper--side-controls .carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  pointer-events: none;
+}
+
+.carousel-wrapper--side-controls .carousel-btn {
+  pointer-events: all;
+}
+
 .carousel-btn {
   background: var(--brand-dark);
   color: var(--brand-light);
