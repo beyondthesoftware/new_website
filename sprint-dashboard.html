@@ -146,7 +146,7 @@
   </section>
 
   <!-- Week by week -->
-  <section class="section section--dark" style="color: white;">
+  <section class="section section--dark" style="color: black;">
     <div class="container">
       <h2 class="h2 text-center">Week-by-Week Breakdown</h2>
 
@@ -293,49 +293,150 @@
     <div class="container">
       <h2 class="h2 text-center">Frequently Asked Questions</h2>
 
-      <div style="max-width: 48rem; margin: 2.5rem auto; display: flex; flex-direction: column; gap: 2rem;">
-        <div>
-          <h3 class="h3">How much time should I expect to spend each week?</h3>
-          <p class="lead">Most participants spend 2–4 hours weekly, including calls and homework.</p>
+      <div style="max-width: 48rem; margin: 2.5rem auto; display: flex; flex-direction: column; gap: 1rem;">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>How much time should I expect to spend each week?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">Most participants spend 2–4 hours weekly, including calls and homework.</p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="h3">Are the group calls required?</h3>
-          <p class="lead">Not required, but highly recommended. Recordings are available.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Are the group calls required?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">Not required, but highly recommended. Recordings are available.</p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="h3">What if my data is inaccurate?</h3>
-          <p class="lead">That's expected. Week 2 is dedicated to understanding and improving accuracy.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What if my data is inaccurate?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">That's expected. Week 2 is dedicated to understanding and improving accuracy.</p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="h3">Do we only build one dashboard?</h3>
-          <p class="lead">You'll build one dashboard with three widgets and learn how to replicate the process you can use again.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Do we only build one dashboard?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">You'll build one dashboard with three widgets and learn how to replicate the process you can use again.</p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="h3">Will you tell me exactly which widgets to build?</h3>
-          <p class="lead">No, and that's intentional. You'll choose based on your role and goals. We guide without prescribing.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Will you tell me exactly which widgets to build?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">No, and that's intentional. You'll choose based on your role and goals. We guide without prescribing.</p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="h3">Will I really see results in just a month?</h3>
-          <p class="lead">Most participants do—sometimes incremental, sometimes significant.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Will I really see results in just a month?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">Most participants do—sometimes incremental, sometimes significant.</p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="h3">What kind of feedback do I get?</h3>
-          <p class="lead">Written feedback on worksheets, plus a 1:1 call for personalized support.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>What kind of feedback do I get?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">Written feedback on worksheets, plus a 1:1 call for personalized support.</p>
+          </div>
         </div>
 
-        <div>
-          <h3 class="h3">Do you work with my teammates too?</h3>
-          <p class="lead">Each sprint registration is for one participant, though you can add-on additional teammates or opt for a private session. By the end of the sprint you will be equipped to engage them with what you've learned.</p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Do you work with my teammates too?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p class="lead">Each sprint registration is for one participant, though you can add-on additional teammates or opt for a private session. By the end of the sprint you will be equipped to engage them with what you've learned.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .faq-item {
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 0;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--brand-dark);
+      transition: color 0.2s;
+    }
+    .faq-question:hover {
+      color: var(--brand-accent);
+    }
+    .faq-icon {
+      font-size: 1.5rem;
+      font-weight: 300;
+      transition: transform 0.3s;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding-bottom: 1.25rem;
+    }
+    .faq-answer p {
+      margin: 0;
+    }
+  </style>
+
+  <script>
+    function toggleFAQ(button) {
+      const faqItem = button.parentElement;
+      const wasActive = faqItem.classList.contains('active');
+
+      // Close all FAQ items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+
+      // If this item wasn't active, open it
+      if (!wasActive) {
+        faqItem.classList.add('active');
+      }
+    }
+  </script>
 
   <!-- Reserve my spot -->
   <section id="reserve-spot" class="section section--dark">
@@ -365,7 +466,7 @@
         <a href="sprints.html" class="btn btn-secondary">
           Explore All Sprints
         </a>
-        <a href="sprint-register.html" class="btn btn-outline">
+        <a href="contact.html" class="btn btn-outline">
           Request 1:1 Consulting
         </a>
       </div>
